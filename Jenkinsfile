@@ -10,7 +10,15 @@ pipeline {
 		stage('Pipeline'){
 			steps{
 				script{
+					
 					println 'Pipeline'
+					
+                    if (params.buildTool == "gradle") {
+                        println 'Ejecutar gradle'
+                    } else {
+                        println 'Ejecutar maven'
+                    }
+                    
 				}
 			}
 		}
